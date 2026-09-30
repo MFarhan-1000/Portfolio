@@ -5,7 +5,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="flex min-h-screen items-center justify-center px-6 py-24"
+      className="flex min-h-screen items-center justify-center py-6 px-6 sm:py-24"
     >
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Left: intro */}

@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
-    <section id='#' className=" mx-auto flex min-h-[85vh] max-w-6xl flex-col-reverse items-center justify-center gap-12 px-6 pt-8 pb-16 md:flex-row md:justify-between">
+    <section id='#' className=" mx-auto flex min-h-[85vh] max-w-6xl flex-col-reverse items-center justify-center gap-12 px-6 pt-8 pb-10 sm:pb-16 md:flex-row md:justify-between">
       {/* Left text */}
       <div className="flex-1 text-center md:text-left">
-        <p className="text-2xl font-semibold text-secondary sm:text-3xl">
-          Hello 👋, I'm
-        </p>
+        
 
         <h1 className="mt-2 text-4xl font-extrabold tracking-tight text-text md:text-7xl lg:text-8xl">
          Muhammad <span className="text-secondary">Farhan</span>
