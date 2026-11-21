@@ -1,6 +1,7 @@
 // components/Hero.jsx
 import React from 'react'
 import { Link } from 'react-router-dom'
+import image from "../assets/Gemini_Generated_Image_lfs26llfs26llfs2.jpg"
 
 function Hero() {
   return (
@@ -47,20 +48,20 @@ function Hero() {
 
         {/* Socials Links  */}
         <div className="mt-8 flex justify-center gap-6 text-base text-text/70 md:justify-start">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="transition hover:text-secondary">GitHub</a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="transition hover:text-secondary">LinkedIn</a>
+          <a href="https://github.com/MFarhan-1000" target="_blank" rel="noreferrer" className="transition hover:text-secondary">GitHub</a>
+          <a href="https://www.linkedin.com/in/muhammad-farhan-507a85323/" target="_blank" rel="noreferrer" className="transition hover:text-secondary">LinkedIn</a>
         </div>
       </div>
 
       {/* Right side image */}
-      <div className="relative">
-        <div className="absolute inset-0 -z-10 rounded-full bg-secondary/30 blur-3xl" />
-        <img
-          src="https://i.pravatar.cc/400?img=12"
-          alt="My-Pic"
-          className="h-54 w-54 rounded-full border-4 border-secondary/60 object-cover shadow-xl md:h-80 md:w-80 lg:h-96 lg:w-96"
-        />
-      </div>
+<div className="relative">
+  <div className="absolute inset-0 -z-10 rounded-full bg-secondary/30 blur-3xl" />
+  <img
+    src={image}
+    alt="My-Pic"
+    className=" h-68 w-62 rounded-full border-4 border-secondary/60 object-cover shadow-xl md:h-92 md:w-86 lg:h-112 lg:w-100"
+  />
+</div>
     </section>
   )
 }

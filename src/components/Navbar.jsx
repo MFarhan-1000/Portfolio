@@ -16,7 +16,7 @@ function Navbar() {
     <div className="sticky top-3 z-50 px-4 sm:px-2">
       <nav className="flex items-center justify-between rounded-xl border border-secondary/40 bg-primary/70 px-5 py-3 shadow-lg shadow-black/20 backdrop-blur-md">
         <Link to="/" className="text-xl font-bold tracking-wide text-text">
-          Far<span className="text-secondary">han</span>
+          <span className='text-secondary'>M.</span>Far<span className="text-secondary">han</span>
         </Link>
 
         {/* Desktop links */}

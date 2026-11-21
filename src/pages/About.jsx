@@ -1,5 +1,6 @@
 // components/About.jsx
 import React from 'react'
+import image from "../assets/Gemini_Generated_Image_lfs26llfs26llfs2.jpg"
 
 function About() {
   return (
@@ -17,9 +18,9 @@ function About() {
           <div className="relative shrink-0">
             <div className="absolute inset-0 -z-10 rounded-full bg-secondary/30 blur-3xl" />
             <img
-              src="https://i.pravatar.cc/400?img=15"
+              src={image}
               alt="Farhan"
-              className="h-40 w-40 rounded-2xl border-2 border-secondary/50 object-cover shadow-xl sm:h-52 sm:w-52 md:h-60 md:w-60 lg:h-72 lg:w-72"
+              className="h-46 w-40 rounded-2xl border-2 border-secondary/50 object-cover shadow-xl sm:h-60 sm:w-52 md:h-68 md:w-60 lg:h-82 lg:w-72"
             />
           </div>
 
@@ -43,11 +44,11 @@ function About() {
 
             <div className="mt-6 grid grid-cols-3 gap-3 border-t border-secondary/30 pt-5 text-center sm:mt-8 sm:gap-4 sm:pt-6 md:text-left">
               <div>
-                <p className="text-2xl font-bold text-secondary sm:text-3xl">1+</p>
-                <p className="text-xs text-text/70 sm:text-sm">Years experience</p>
+                <p className="text-2xl font-bold text-secondary sm:text-3xl">8+</p>
+                <p className="text-xs text-text/70 sm:text-sm">Months experience</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-secondary sm:text-3xl">10+</p>
+                <p className="text-2xl font-bold text-secondary sm:text-3xl">5+</p>
                 <p className="text-xs text-text/70 sm:text-sm">Projects built</p>
               </div>
               <div>

@@ -1,7 +1,7 @@
 // components/Projects.jsx
 import React from 'react'
 import CarShop from '../assets/dextar-studio-ccgjEBvHTIU-unsplash.jpg'
-import SocailMedia from "../assets/berke-citak-0cpyFsSUiSc-unsplash.jpg"
+import SocailMedia from '../assets/berke-citak-0cpyFsSUiSc-unsplash.jpg'
 
 const GithubIcon = () => (
   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
@@ -25,14 +25,15 @@ function Projects() {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Centered Flex Container */}
+        <div className="mt-8 flex flex-wrap items-stretch justify-center gap-6">
           {/* Project 1 */}
-          <article className="group overflow-hidden rounded-2xl border border-secondary/30 bg-primary transition duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-lg hover:shadow-secondary/20">
+          <article className="group w-full overflow-hidden rounded-2xl border border-secondary/30 bg-primary transition duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-lg hover:shadow-secondary/20 md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
             <div className="overflow-hidden">
               <img
                 src={CarShop}
                 alt="Car Store"
-                className="h-45 w-full object-cover transition duration-500 group-hover:scale-110 lg:h-60"
+                className="h-44 w-full object-cover transition duration-500 group-hover:scale-110 lg:h-60"
               />
             </div>
             <div className="p-4">
@@ -68,12 +69,12 @@ function Projects() {
           </article>
 
           {/* Project 2 */}
-          <article className="group overflow-hidden rounded-2xl border border-secondary/30 bg-primary transition duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-lg hover:shadow-secondary/20">
+          <article className="group w-full overflow-hidden rounded-2xl border border-secondary/30 bg-primary transition duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-lg hover:shadow-secondary/20 md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
             <div className="overflow-hidden">
               <img
                 src={SocailMedia}
-                alt="Task Manager"
-                className="h-45 w-full object-cover transition duration-500 group-hover:scale-110 lg:h-60"
+                alt="Sharing Is Caring"
+                className="h-44 w-full object-cover transition duration-500 group-hover:scale-110 lg:h-60"
               />
             </div>
             <div className="p-4">
@@ -87,41 +88,10 @@ function Projects() {
                 <li className="rounded-full border border-secondary/40 px-3 py-1 text-xs text-text">MongoDB</li>
               </ul>
               <div className="mt-3 flex gap-6 text-sm font-medium">
-                <a href="#" className="text-secondary transition hover:underline">Live Demo</a>
                 <a
-                  href="#"
-                  className="flex items-center gap-1.5 text-text/70 transition hover:text-secondary"
-                >
-                  <GithubIcon />
-                  GitHub
-                </a>
-              </div>
-            </div>
-          </article>
-
-          {/* Project 3 */}
-          <article className="group overflow-hidden rounded-2xl border border-secondary/30 bg-primary transition duration-300 hover:-translate-y-2 hover:border-secondary hover:shadow-lg hover:shadow-secondary/20">
-            <div className="overflow-hidden">
-              <img
-                src="https://picsum.photos/seed/project3/600/400"
-                alt="Chat Application"
-                className="h-45 w-full object-cover transition duration-500 group-hover:scale-110 lg:h-60"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-text">Chat Application</h3>
-              <p className="mt-1 text-sm leading-relaxed text-text/70">
-                A real-time chat app with private rooms and message history.
-              </p>
-              <ul className="mt-3 flex flex-wrap gap-2">
-                <li className="rounded-full border border-secondary/40 px-3 py-1 text-xs text-text">React</li>
-                <li className="rounded-full border border-secondary/40 px-3 py-1 text-xs text-text">Socket.io</li>
-                <li className="rounded-full border border-secondary/40 px-3 py-1 text-xs text-text">MongoDB</li>
-              </ul>
-              <div className="mt-3 flex gap-6 text-sm font-medium">
-                <a href="#" className="text-secondary transition hover:underline">Live Demo</a>
-                <a
-                  href="#"
+                  href="https://github.com/MFarhan-1000/Facebook_Project"
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center gap-1.5 text-text/70 transition hover:text-secondary"
                 >
                   <GithubIcon />

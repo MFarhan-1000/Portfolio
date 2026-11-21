@@ -39,7 +39,7 @@ function Contact() {
                 <rect x="3" y="5" width="18" height="14" rx="2" />
                 <path d="m3 7 9 6 9-6" />
               </svg>
-              farhan@example.com
+              mfarhan0651@example.com
             </p>
             <p className="flex items-center justify-center gap-3 lg:justify-start">
               <svg className="h-5 w-5 text-secondary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ function Contact() {
 
           <div className="mt-8 flex justify-center gap-5 text-text/70 lg:justify-start">
             <a
-              href="https://github.com"
+              href="https://github.com/MFarhan-1000"
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub"
@@ -63,7 +63,7 @@ function Contact() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/muhammad-farhan-507a85323/"
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn"
