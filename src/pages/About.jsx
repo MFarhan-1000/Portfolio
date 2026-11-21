@@ -1,6 +1,6 @@
 // components/About.jsx
 import React from 'react'
-import image from "../assets/Gemini_Generated_Image_lfs26llfs26llfs2.jpg"
+import image from "../assets/My_Image.jpg"
 
 function About() {
   return (
