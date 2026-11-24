@@ -2,13 +2,40 @@
 import React, { useState } from 'react'
 
 function Contact() {
+  const [result, setResult] = useState("")
   const [sent, setSent] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // TODO: send the form data to your backend or an email service
-    setSent(true)
-    e.currentTarget.reset()
+  const onSubmit = async (event) => {
+    event.preventDefault()
+    const form = event.currentTarget
+    setLoading(true)
+    setSent(false)
+    setResult("")
+
+    const formData = new FormData(form)
+    formData.append("access_key", "51e2eaad-3ac5-4267-8b19-2be163a6fc67")
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setSent(true)
+        setResult("Success!")
+        form.reset()
+      } else {
+        setResult("Error")
+      }
+    } catch (error) {
+      setResult("Error")
+    } finally {
+      setLoading(false)
+    }
   }
 
   const input =
@@ -78,7 +105,7 @@ function Contact() {
 
         {/* Right: form */}
         <form
-          onSubmit={handleSubmit}
+          onSubmit={onSubmit}
           className="space-y-5 rounded-2xl border border-secondary/30 bg-primary p-6 shadow-xl shadow-black/20 sm:p-8"
         >
           <div>
@@ -111,14 +138,21 @@ function Contact() {
 
           <button
             type="submit"
-            className="w-full rounded-lg bg-secondary px-8 py-3.5 text-base font-semibold text-bg transition hover:opacity-90"
+            disabled={loading}
+            className="w-full rounded-lg bg-secondary px-8 py-3.5 text-base font-semibold text-bg transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </button>
 
           {sent && (
             <p className="text-center text-sm text-secondary">
               Thanks! Your message has been sent.
+            </p>
+          )}
+
+          {result === "Error" && (
+            <p className="text-center text-sm text-red-400">
+              Something went wrong. Please try again.
             </p>
           )}
         </form>
